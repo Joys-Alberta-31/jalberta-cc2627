@@ -1,0 +1,10 @@
+PROGRAM CIRCLE_AREA
+  IMPLICIT NONE
+  REAL, PARAMETER :: pi = 3.14D0
+  REAL :: Diameter, AREA
+
+  PRINT*, "Enter diameter" 
+  READ*, diameter
+  AREA = Pi * (Diameter/2)**2
+  PRINT*, "AREA OF THE CIRCLE:", AREA
+END PROGRAM CIRCLE_AREA
