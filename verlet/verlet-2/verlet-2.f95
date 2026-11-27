@@ -57,13 +57,15 @@ PROGRAM VERLET_2
   PRINT*, "final time (s):", time
   DO i = 1, n
     x(i,2) = x(i,2) + v(i, 2) + (1/2*(f(i,2)/m(i)))* time**2
+    v(i,2) = v(i,2) + (f(i,2)/m(i))*time**2
   END DO
   !loop -  print new velocity and position for all the particles
   DO i = 1, n
     PRINT*, "Particle:", i
     PRINT*, "Final Position:", x(i,:)
     PRINT*, "Final velocity:", v(i,:)
-    PRINT*, "RESULT PARTICLE AT Y-DIMENSION:", x(i,2)
+    PRINT*, "PARTICLE POSITION AT Y-DIMENSION:", x(i,2)
+    PRINT*, "PARTICLE VELOCITY AT Y-DIMENSION:", v(i,2)
   END DO
 
   ! deallocate the memory array after its used
